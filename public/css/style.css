@@ -1,0 +1,629 @@
+/* *****************************************************************
+GENERAL
+***************************************************************** */
+:root {
+    --black: rgb(0,0,0);
+    --white: rgb(255,255,255);
+    --red: rgb(255,0,0);
+    --darkgreen: rgb(0,141,0);
+    --shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* Adding border around all the elements for better understanding */
+    /*border:1px solid rgba(0,0,0,0.1);*/
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    background-color: var(--white);
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+p {
+    font-size:1.6rem;
+    margin: 1.5rem;
+    text-align: justify;
+    text-justify: auto;
+    line-height:3rem;
+    color: var(--black);
+}
+
+table {
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+    max-width: 80%;
+    border: 1px solid var(--black);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.form button {
+    margin-bottom: 1rem;
+}
+
+.form>div {
+    padding: 1rem;
+}
+
+label {
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
+input, select {
+    border: 1px solid var(--black);
+    border-radius: 1rem;
+    padding: 1rem;
+    float: right;
+    max-width: 100%;
+    box-shadow: var(--shadow);
+}
+
+.btn {
+    border-radius: 8px; 
+    border: none;
+    box-shadow: var(--shadow);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    display:flex;
+    padding: 1rem;
+    width:50%;
+    justify-content:center;
+}
+
+h1 {
+    color:var(--white);
+    text-align:center;
+    padding-top:2rem;
+    font-size:6rem;
+    text-shadow: 5px 5px 10px var(--black);
+}
+
+/* *****************************************************************
+HEADER - NAVBAR
+***************************************************************** */
+
+header {
+	text-align: center;
+}
+
+nav ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.logo {
+	width:30%;
+	margin:1rem;
+}
+
+.menuLink {
+	font-size: 2.4rem;  
+	font-weight: 600;
+	color: var(--red);
+	text-decoration: none;
+	display: inline-block;
+	padding: 1rem;
+	transition: 0.7s ease;
+	border-radius:0.5rem;
+}
+
+.menuLink:hover {
+	background: radial-gradient(circle, rgba(63,187,251,1) 0%, rgba(59,168,63,1) 100%);
+	color: var(--white);
+}
+
+.hamburger {
+    margin:10px;
+    z-index:999;
+    position: fixed;
+    right:0px;
+    top:0px;
+}
+
+.bar {
+    display:block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.5s ease-in-out;
+    background-color: var(--black);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity:0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(225deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-225deg);
+}
+
+.navMenu {
+    position:fixed;
+    top: -100%;
+    flex-direction: column;
+    background-color:var(--white);;
+    width:100%;
+}
+
+.navMenu.active {
+    top: 0;
+    box-shadow: var(--shadow);
+}
+
+.to-top {
+    background:linear-gradient(360deg, rgba(32,77,224,1) 0%, rgba(180,58,173,0.878234398782344) 60%);;
+    position:fixed;
+    bottom: 20px;
+    right:10px;
+    width: 50px;
+    height: 50px;
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+
+.to-top.active {
+    bottom:32px;
+    opacity:1;
+}
+
+/* *****************************************************************
+MAINPAGE
+***************************************************************** */
+
+.banner {
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    margin:1rem 0;
+}
+
+.about {
+    background-image: url(/0Project/public/img/general/about1.jpg);
+    background-position: 50% 15%;
+    height:30vh;
+}
+
+.lenses {
+    background-image: url(/0Project/public/img/general/lenses.jpg);
+    height:30vh;
+}
+
+.adapters {
+    background-image: url(/0Project/public/img/general/adapters.jpg);
+    height:30vh;
+}
+
+.cameras {
+    background-image: url(/0Project/public/img/general/cameras.jpg);
+    height:30vh;
+}
+
+.mainpageCard {
+    margin:0 6% 5%;
+    box-shadow: var(--shadow);
+    border-radius:1rem;
+}
+
+.mainpageCard img {
+    border-radius:1rem;
+    width: 100%;
+    height: auto;
+}
+
+.mainpageCard h3 {
+    text-align:center;
+    color:var(--black);
+    padding:1rem;
+}
+
+.mainpageCard p {
+    text-align:justify;
+    padding:1rem;
+}
+
+/* *****************************************************************
+ABOUT
+***************************************************************** */
+
+
+
+
+/* *****************************************************************
+PRODUCTS: ADAPTERS, CAMERAS, LENSES
+***************************************************************** */
+/*filters*/
+.filters {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content: center;
+    margin:1rem 0;
+}
+
+.filter {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%; 
+    border: none;
+    box-shadow: var(--shadow);
+    margin: 0.5rem;
+    padding:1rem;
+}
+
+.filter:hover {
+    background: linear-gradient(45deg, rgba(36,175,17,1) 0%, rgba(180,58,173,1) 85%);
+    color:var(--white);
+    text-shadow:2px 2px 5px var(--black);
+}
+
+.productCard {
+    display: none;
+}
+  
+/* The class 'shadow' is added to the filtered elements */
+.show {
+    display: block;
+}
+
+.productCard {
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5) ;
+    box-shadow: var(--shadow) ;
+    margin:2rem;
+    padding:2rem;
+}
+
+.productCard td {
+    font-family: sans-serif;
+    font-size:2rem;
+    padding: 0.5rem 0.5rem;
+    text-align: left;
+}
+
+.productImage {
+margin-bottom:1rem;
+}
+
+.productCard img {
+    margin:auto;
+    display: block;
+    max-width:23rem;
+    max-height:40rem;
+    width: auto;
+    height: auto;
+}
+
+th {
+    padding:1rem;
+}
+
+td {
+    text-align:center;
+}
+
+.btn:hover {
+    font-weight:900;
+    box-shadow: 0 1px 20px rgba(0, 150, 0, 0.5);
+}
+.amazon {
+    background-color:rgb(255,255,255);
+    color:orange;
+}
+
+.bhphoto {
+    background-color:rgb(139,0,0);
+    color:orange;
+}
+
+/* *****************************************************************
+CRUD TABLES
+***************************************************************** */
+
+.responsiveTable {
+    overflow-x:auto;
+    box-shadow: var(--shadow);
+    border-radius:1rem;
+    border: 1px solid gray;
+}
+
+.crud {
+    width:100%;
+}
+
+.responsiveTable img {
+    width:20rem;
+    height:auto;
+}
+
+
+.deleteButton, .editButton {
+    padding:0.5rem;
+    border:none;
+    border-radius:0.2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.deleteButton {
+    font-size:1.5rem;
+    font-weight:400;
+}
+
+.editButton {
+    background-color:rgba(0,0,0,0.2);
+    color:var(--black);
+}
+
+.deleteButton:hover {
+    color:var(--white);
+    background-color:var(--red);
+}
+
+.editButton:hover {
+    color:var(--white);
+    background-color:var(--darkgreen);
+}
+
+.crud tr:nth-child(even) {
+  background-color: rgb(242,242,242);
+}
+
+.addProduct {
+    padding:3rem 2rem 5rem;
+    font-size:5rem;
+}
+
+
+/* *****************************************************************
+ERRORs
+***************************************************************** */
+
+.loginError {
+    color:var(--red);
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:5rem;
+}
+
+.error404 {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:5rem;
+    height:60vh;
+}
+
+.error404svg {
+    height:40vh;
+}
+
+.error404text {
+    font-size: 3rem;
+    margin:1rem;
+    color:var(--red);
+}
+
+.error404button {
+    width:70%;
+    color:var(--black);
+    font-size:2rem;
+    margin-top:5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.connectionError{
+    color:var(--red);
+    margin-left:30%;
+    font-size:3rem;
+}
+
+
+/* *****************************************************************
+MOBILE HORIZONTAL
+***************************************************************** */
+
+@media screen and (min-width: 580px) {
+
+    .products, .crudTable {
+        margin-left:auto;
+        margin-right:auto;
+        align-items:center;
+        justify-content:center;
+        display:flex;
+        flex-wrap:wrap;
+    }
+    
+    .productCard {
+        min-width:55rem;
+    }
+    
+    .productCard table {
+    	margin-left:25rem;
+        margin-right:auto;
+    }
+    
+    .productCard img {
+        float: left;
+        margin:auto;
+        max-width:23rem;
+        max-height:40rem;
+        width: auto;
+        height: auto;
+    }
+    
+    .amazon, .bhphoto {
+        margin-left:25rem;
+        width:40%;
+    }
+}
+
+
+/* *****************************************************************
+TABLETTE
+***************************************************************** */
+
+@media screen and (min-width: 780px) {
+    
+    h1 {
+        font-size:10rem;
+    }
+    
+	.products, .navbar, .wrapper, .crudTable {
+	margin:0 5%;
+    box-shadow: var(--shadow);
+    }
+
+    .navbar {
+        border-radius: 0 0 1rem 1rem;
+    }
+    
+    .mainpage {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap; 
+    }
+    
+    .mainpageCard {
+    width:40%;
+    margin:2rem auto;
+    justify-content:space-between;
+    }
+
+    .mainpage img {
+        max-height:25rem;
+        width:auto;
+        margin:auto;
+        display: flex;
+        align-items:center;
+    }
+
+    .products {
+        border-radius:1rem 1rem 0 0;
+    }
+    
+    .crudTable {
+        border-radius:1rem;
+    }
+    
+	nav ul {
+		display: flex;
+		justify-content: space-around;
+		border-radius: 0 0 1rem 1rem;
+	}
+	
+	.menuLink {
+	font-size: 2rem;  
+	font-weight: 400;
+	color: var(--black);
+	text-decoration: none;
+	display: inline-block;
+	padding: 1rem;
+	}
+	
+	header img {
+		width: 40%;
+	}
+	
+    .navMenu {
+        position:relative;
+        display:flex;
+        flex-direction: row;
+        transition: none;
+        box-shadow: none;
+    }
+
+    .hamburger {
+        display:none;
+    }	
+
+    .form {
+        margin: auto;
+        margin-top:5rem;
+        max-width: 50%;
+    }
+
+    .productCard {
+        min-width:30rem;
+    }
+    
+    .productImage {
+        height:40rem;
+        display: flex;
+        align-items:center;
+    }
+    
+    .productCard table {
+    	margin-left:auto;
+    }
+    
+    .btn {
+        margin-left:auto;
+        width:40%;
+    }
+}
+
+
+/* *****************************************************************
+DESKTOP
+***************************************************************** */
+
+@media screen and (min-width: 980px) {
+
+	header img {
+		float:left;
+		min-width: 20rem;
+		margin: 0;
+		padding:0;
+	}
+	
+	nav {
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+	}
+
+	nav li {
+	    display: flex;
+	    justify-content: space-between;
+		margin-left: 1rem;
+		margin-top: 3rem;
+	}
+}
